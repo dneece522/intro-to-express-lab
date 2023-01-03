@@ -1,6 +1,7 @@
 // import modules
 
 import express from 'express'
+import { newSec } from './data/new-sec-data.js'
 
 // Create Express app
 
@@ -19,6 +20,8 @@ app.set('view engine', 'ejs')
 app.get('/home', function(req, res) {
   res.render('home')
 })
+
+
 
 // Tell the app to listen on port 3000
 
