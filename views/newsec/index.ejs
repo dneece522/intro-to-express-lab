@@ -7,6 +7,14 @@
   <title>New SEC School Data</title>
 </head>
 <body>
-  
+  <h1>SEC Bowl Game Data</h1>
+  <ul>
+    <% newSec.forEach(team => { %> 
+      <li>
+        <%= team.school %> is in the <%= team.division %> division, and they 
+        <%= team.bowlWin ? 'won their bowl game!' : "lost their bowl game or didn't make a bowl game." %>  
+      </li>
+    <% }) %> 
+  </ul>
 </body>
 </html>
