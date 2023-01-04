@@ -1,6 +1,8 @@
 // import modules
 
 import express from 'express'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import { newSec } from './data/new-sec-data.js'
 
 // Create Express app
@@ -13,7 +15,9 @@ app.set('view engine', 'ejs')
 
 // Mount Middleware (app.use)
 
-
+app.use(
+  express.static(path.join(path.dirname(fileURLToPath(import.meta.url)), 'public'))
+)
 
 // Mount routes
 
